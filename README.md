@@ -1,5 +1,5 @@
 
-# Sequnce Model Use Cases
+# Sequence Model Use Cases
 
 ## Introduction
 
