@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lesson, we'll learn about **_Sequence Models_**, and what makes them different from traditional Multi-Layer Perceptrons. We'll also examine some of the common things Sequence Models can be used for!
+In this lesson, you'll learn about **_Sequence Models_**, and what makes them different from traditional Multi-Layer Perceptrons. You'll also examine some of the common things Sequence Models can be used for!
 
 ## Objectives
 
@@ -14,20 +14,20 @@ You will be able to:
 
 ## What is a Sequence Model?
 
-A **_Sequence Model_** is a general term for a special class of Deep Neural Networks that work with a time series of data as an input. The series of data is any set of data where we want the model to consider the data one point at a time, in order. This means that they are great for problems where the order of the data matters--for instance, stock price data or text. In both cases, the data only makes sense in order.  For instance, scrambling the words in a sentence destroys the meaning of the sentence, and it's impossible to predict if a stock price is going to go up or down if we don't see the prices in sequential order. In both cases, the sequence of the data matters. 
+A **_Sequence Model_** is a general term for a special class of Deep Neural Networks that work with a time series of data as an input. The series of data is any set of data where you want the model to consider the data one point at a time, in order. This means that they are great for problems where the order of the data matters&mdash;for instance, stock price data or text. In both cases, the data only makes sense in order.  For instance, scrambling the words in a sentence destroys the meaning of the sentence, and it's impossible to predict if a stock price is going to go up or down if you don't see the prices in sequential order. In both cases, the sequence of the data matters. 
 
-Consider the following problem: You are given the sentence "we are going to" and asked to complete the sentence by generating at least 5 more words.  The second word that you choose will depend heavily on the first word that you choose. The third word that you choose will depend heavily on the first and second words that you choose, and so on. Because of this, it is crucial that our models _remember_ the previous words that they generated--in computer science, we call this being **_stateful_**. This means that when our model is generating the second word, it needs to know what it generated as the first word! To do this, **_Recurrent Neural Networks_** feed their output for timestep $\large x_t$ back into the model as input for timestep $\large x_{t + 1}$!
+Consider the following problem: You are given the sentence "you are going to" and asked to complete the sentence by generating at least 5 more words.  The second word that you choose will depend heavily on the first word that you choose. The third word that you choose will depend heavily on the first and second words that you choose, and so on. Because of this, it is crucial that the models _remember_ the previous words that they generated&mdash;in computer science, you call this being **_stateful_**. This means that when the model is generating the second word, it needs to know what it generated as the first word! To do this, **_Recurrent Neural Networks_** feed their output for timestep $\large x_t$ back into the model as input for timestep $\large x_{t + 1}$!
 
 <img src='images/rnn.gif'>
 
-There are many different kinds of Sequence Models, and they are most generally referred to as **_Recurrent Neural Networks_**, or **_RNNs_**. In the next lesson, we'll dig into how they work. Let's examine some of the things that RNNs can do!
+There are many different kinds of Sequence Models, and they are most generally referred to as **_Recurrent Neural Networks_**, or **_RNNs_**. In the next lesson, you'll dig into how they work. Let's examine some of the things that RNNs can do!
 
 ## Sequence Model Use Cases
 
 
 ### Text Classification
 
-One of the most common applications of RNNs is for plain old text classification. Recall that all the models that we've used so far for text generation have been incapable of focusing on the order of the words, which means that they're likely to miss out on more advanced pieces of information such as connotation, context, sarcasm, etc. However, since RNNs examine the words one at a time and remember what they've seen at each time step, they're able to capture this information quite effectively in most cases! For the final lab of this section, we'll actually build one of these models ourselves, which will be able to detect toxic comments from real-world wikipedia comments!
+One of the most common applications of RNNs is for plain old text classification. Recall that all the models that you've used so far for text generation have been incapable of focusing on the order of the words, which means that they're likely to miss out on more advanced pieces of information such as connotation, context, sarcasm, etc. However, since RNNs examine the words one at a time and remember what they've seen at each time step, they're able to capture this information quite effectively in most cases! For the final lab of this section, you'll actually build one of these models ourselves, which will be able to detect toxic comments from real-world wikipedia comments!
 
 ### Sequence Generation
 
@@ -38,14 +38,14 @@ Sequence generation is probably some of the most fun that you can have with Neur
 
 ### Sequence-to-Sequence Models
 
-If you've ever used Google Translate before, then you've already interacted with a **_Sequence to Sequence Model_**. These models learn to map an input sequence to an output sequence, usually through an **_Encoder-Decoder_** architecture. You'll see more about encoder-decoder models in a future section--they're among the most useful types of RNNs currently in production. Note that although going from a sequence of English words to the corresponding sequence of French words is probably the basic example of Sequence to Sequence models, there are many other kinds of problems that are Sequence to Sequence that aren't immediately obvious. For instance, check out this example of a neural network that completes drawings of a mosquito based on how you start drawing the bug!
+If you've ever used Google Translate before, then you've already interacted with a **_Sequence to Sequence Model_**. These models learn to map an input sequence to an output sequence, usually through an **_Encoder-Decoder_** architecture. You'll see more about encoder-decoder models in a future section&mdash;they're among the most useful types of RNNs currently in production. Note that although going from a sequence of English words to the corresponding sequence of French words is probably the basic example of Sequence to Sequence models, there are many other kinds of problems that are Sequence to Sequence that aren't immediately obvious. For instance, check out this example of a neural network that completes drawings of a mosquito based on how you start drawing the bug!
 
 <img src='images/multi_sketch_mosquito.gif'>
 
-Here's another example from [pix2pix](https://phillipi.github.io/pix2pix/). Now, stop what you're doing, follow that link, and take a few minutes to play around with pix2pix--watching it generate photos from your own drawings is really cool!
+Here's another example from [pix2pix](https://phillipi.github.io/pix2pix/). Now, stop what you're doing, follow that link, and take a few minutes to play around with pix2pix&mdash;watching it generate photos from your own drawings is really cool!
 
 <img src='images/pix2pix.gif'>
 
 ## Summary
 
-In this lesson, we learned about Sequence Models, and some of their more common use cases. 
+In this lesson, you learned about Sequence Models, and some of their more common use cases. 
